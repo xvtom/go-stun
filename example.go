@@ -22,6 +22,7 @@ import (
 )
 
 func main() {
+	stun.SetServerHost("stun1.voiceeclipse.net", stun.DefaultServerPort)
 	nat, host, err := stun.Discover()
 	if err != nil {
 		fmt.Println(err)
